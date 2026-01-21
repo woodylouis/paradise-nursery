@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import { CartProvider } from "./components/CartSlice";
@@ -9,6 +9,8 @@ import ShoppingCartPage from "./components/ShoppingCartPage";
 import AboutUs from "./components/AboutUs";
 
 function App() {
+  const [showProducts, setShowProducts] = useState(false);
+
   return (
     <CartProvider>
       <Router>
@@ -18,12 +20,33 @@ function App() {
 
           {/* 路由配置 */}
           <main className="main-content">
-            <Routes>
-              <Route path="/" element={<LandingPage />} />
-              <Route path="/products" element={<ProductListingPage />} />
-              <Route path="/cart" element={<ShoppingCartPage />} />
-              <Route path="/about" element={<AboutUs />} />
-            </Routes>
+            {!showProducts ? (
+              <div className="landing-page">
+                <div className="landing-background">
+                  <div className="landing-content">
+                    <h1>Welcome to Paradise Nursery</h1>
+                    <p className="landing-description">
+                      Welcome to Paradise Nursery, your one-stop shop for beautiful houseplants.
+                      We offer a wide variety of healthy and vibrant plants to bring life to your home or office.
+                      Our mission is to make plant ownership accessible and enjoyable for everyone.
+                    </p>
+                    <button
+                      className="get-started-button"
+                      onClick={() => setShowProducts(true)}
+                    >
+                      Get Started
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <Routes>
+                <Route path="/" element={<ProductListingPage />} />
+                <Route path="/products" element={<ProductListingPage />} />
+                <Route path="/cart" element={<ShoppingCartPage />} />
+                <Route path="/about" element={<AboutUs />} />
+              </Routes>
+            )}
           </main>
         </div>
       </Router>
