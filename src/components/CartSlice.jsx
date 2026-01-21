@@ -96,8 +96,8 @@ export const CartProvider = ({ children }) => {
   // 提供给组件的值
   const cartValue = {
     cartItems: state.cartItems,
-    addItem: (item) => dispatch(addItem(item)),
-    removeItem: (id) => dispatch(removeItem(id)),
+    addToCart: (item) => dispatch(addItem(item)),
+    removeFromCart: (id) => dispatch(removeItem(id)),
     updateQuantity: (id, newQuantity) =>
       dispatch(updateQuantity(id, newQuantity)),
   };

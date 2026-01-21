@@ -2,30 +2,30 @@ import React from 'react';
 
 const AboutUs = () => {
   return (
-    <div className="about-us-page">
+    <div className="about-us-container">
       <h2 className="page-title">About Paradise Nursery</h2>
-      
+
       <div className="about-container">
         <section className="about-section">
           <h3>Our Mission</h3>
           <p>
-            At Paradise Nursery, our mission is to bring the beauty and benefits of nature into every home and office. 
-            We believe that plants not only enhance the aesthetic appeal of any space but also improve air quality, 
-            reduce stress, and promote overall well-being. Our goal is to make plant ownership accessible and enjoyable 
+            At Paradise Nursery, our mission is to bring the beauty and benefits of nature into every home and office.
+            We believe that plants not only enhance the aesthetic appeal of any space but also improve air quality,
+            reduce stress, and promote overall well-being. Our goal is to make plant ownership accessible and enjoyable
             for everyone, from seasoned plant enthusiasts to first-time buyers.
           </p>
         </section>
-        
+
         <section className="about-section">
           <h3>Our Story</h3>
           <p>
-            Founded in 2018, Paradise Nursery started as a small local nursery with a passion for growing healthy and 
-            vibrant plants. Over the years, we've expanded our collection to include a wide variety of houseplants, 
-            from tropical beauties to low-maintenance succulents. Today, we're proud to serve plant lovers across the 
+            Founded in 2018, Paradise Nursery started as a small local nursery with a passion for growing healthy and
+            vibrant plants. Over the years, we've expanded our collection to include a wide variety of houseplants,
+            from tropical beauties to low-maintenance succulents. Today, we're proud to serve plant lovers across the
             country through our online store, delivering quality plants directly to your doorstep.
           </p>
         </section>
-        
+
         <section className="about-section">
           <h3>Our Values</h3>
           <div className="values-grid">
@@ -47,32 +47,32 @@ const AboutUs = () => {
             </div>
           </div>
         </section>
-        
+
         <section className="about-section">
           <h3>Our Team</h3>
           <div className="team-grid">
             <div className="team-member">
-              <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop" 
-                alt="Sarah Johnson" 
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop"
+                alt="Sarah Johnson"
                 className="team-image"
               />
               <h4>Sarah Johnson</h4>
               <p>Founder & CEO</p>
             </div>
             <div className="team-member">
-              <img 
-                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&h=200&fit=crop" 
-                alt="Michael Chen" 
+              <img
+                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&h=200&fit=crop"
+                alt="Michael Chen"
                 className="team-image"
               />
               <h4>Michael Chen</h4>
               <p>Head Horticulturist</p>
             </div>
             <div className="team-member">
-              <img 
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop" 
-                alt="Emma Rodriguez" 
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop"
+                alt="Emma Rodriguez"
                 className="team-image"
               />
               <h4>Emma Rodriguez</h4>

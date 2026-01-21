@@ -2,7 +2,13 @@ import React from "react";
 import { useCart } from "./CartContext";
 
 const ProductListingPage = () => {
-  const { addToCart } = useCart();
+  const { addToCart, cartItems } = useCart();
+
+  // 检查商品是否已在购物车中
+  const isInCart = (plantId) => {
+    return cartItems.some(item => item.id === plantId);
+  };
+
   // 植物数据，分为3个类别
   const plants = [
     {
@@ -86,8 +92,9 @@ const ProductListingPage = () => {
                   <button
                     className="add-to-cart-button"
                     onClick={() => addToCart(plant)}
+                    disabled={isInCart(plant.id)}
                   >
-                    Add to Cart
+                    {isInCart(plant.id) ? 'Added to Cart' : 'Add to Cart'}
                   </button>
                 </div>
               </div>
